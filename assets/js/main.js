@@ -2,6 +2,12 @@
     "use strict";
 
     /*----------------------------------------
+	   testimonial sections
+	------------------------------------------*/
+
+
+
+    /*----------------------------------------
 	   Sticky Menu Activation
 	------------------------------------------*/
 
@@ -12,6 +18,36 @@
 			$('.header-sticky').removeClass('sticky');
 		}
 	});
+	$(document).ready(function() {
+        $('.testimonial-slider').slick({
+            autoplay: true,
+            autoplaySpeed: 1000,
+            speed: 600,
+			loop:true,
+            draggable: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            responsive: [
+                {
+                  breakpoint: 991,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    }); 
 	$('.count').each(function () {
 		$(this).prop('Counter',0).animate({
 			Counter: $(this).text()
