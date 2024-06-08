@@ -18466,6 +18466,10 @@ input[type=checkbox]:checked + label:after {
 /*====================  
     6.5 Brand Logo CSS 
 ====================*/
+.header-logo img {
+  height: 100px;
+}
+
 .single-brand-logo {
   display: -webkit-box;
   display: -ms-flexbox;
